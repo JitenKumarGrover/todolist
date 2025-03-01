@@ -12,7 +12,10 @@ app.use(express.static("public"));
 
 app.set('view engine', 'ejs');
 
-mongoose.connect("mongodb+srv://jiteng:test@123@cluster0.mongodb.net/todolistDB", {useNewUrlParser: true});
+mongoose.connect("mongodb+srv://jiteng:test%40123@cluster0.mongodb.net/todolistDB", {
+  useNewUrlParser: true,
+  useUnifiedTopology: true
+});
 
 const itemsSchema ={
     name : String
