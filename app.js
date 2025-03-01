@@ -12,10 +12,15 @@ app.use(express.static("public"));
 
 app.set('view engine', 'ejs');
 
-mongoose.connect("mongodb+srv://jiteng:test%40123@cluster0.mongodb.net/todolistDB?retryWrites=true&w=majority", {
+mongoose.connect("mongodb+srv://jitengrover:Pass%40123@cluster0.0u2ht.mongodb.net/todolistDB?retryWrites=true&w=majority", {
   useNewUrlParser: true,
   useUnifiedTopology: true
+}).then(() => {
+  console.log("✅ Successfully connected to MongoDB");
+}).catch(err => {
+  console.error("❌ MongoDB connection error:", err);
 });
+
 
 const itemsSchema ={
     name : String
