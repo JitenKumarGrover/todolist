@@ -15,12 +15,7 @@ app.set('view engine', 'ejs');
 mongoose.connect("mongodb+srv://jitengrover:test%40123>@cluster0.0u2ht.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0", {
   useNewUrlParser: true,
   useUnifiedTopology: true
-}).then(() => {
-  console.log("✅ Successfully connected to MongoDB");
-}).catch(err => {
-  console.error("❌ MongoDB connection error:", err);
 });
-
 
 const itemsSchema ={
     name : String
