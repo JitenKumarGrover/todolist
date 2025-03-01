@@ -12,7 +12,9 @@ app.use(express.static("public"));
 
 app.set('view engine', 'ejs');
 
-mongoose.connect("mongodb+srv://jitengrover:test%40123>@cluster0.0u2ht.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0", {
+mongoose.set("strictQuery", true);
+
+mongoose.connect("mongodb+srv://admin-jiten:test123>@cluster0.0u2ht.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0", {
   useNewUrlParser: true,
   useUnifiedTopology: true
 });
