@@ -14,10 +14,7 @@ app.set('view engine', 'ejs');
 
 mongoose.set("strictQuery", true);
 
-mongoose.connect("mongodb+srv://admin-jiten:test123>@cluster0.0u2ht.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0", {
-  useNewUrlParser: true,
-  useUnifiedTopology: true
-});
+mongoose.connect("mongodb+srv://admin-jiten:test123@cluster0-kjtra.mongodb.net/todolistDB", {useNewUrlParser: true});
 
 const itemsSchema ={
     name : String
