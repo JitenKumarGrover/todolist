@@ -12,7 +12,7 @@ app.use(express.static("public"));
 
 app.set('view engine', 'ejs');
 
-mongoose.connect("mongodb+srv://jiteng:test%40123@cluster0.mongodb.net/todolistDB", {
+mongoose.connect("mongodb+srv://jiteng:test%40123@cluster0.mongodb.net/todolistDB?retryWrites=true&w=majority", {
   useNewUrlParser: true,
   useUnifiedTopology: true
 });
